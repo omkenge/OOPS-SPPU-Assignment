@@ -1,3 +1,4 @@
+import java.util.*;
 
 class Employee {
 	String name, add, mail;
@@ -52,13 +53,32 @@ class ProjectManager extends Employee {
 
 public class OOPS_3 {
 	public static void main(String[] args) {
-		Programmer p = new Programmer("Ketan", "pune", 40000);
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Name Of Programmer :-");
+		String s = sc.nextLine();
+		System.out.print("Enter Location Of Programmer :-");
+		String aa = sc.nextLine();
+		System.out.print("Enter Salary Of Programmer :-");
+		int a = sc.nextInt();
+		Programmer p = new Programmer(s, aa, a);
 		p.salary();
 		System.out.println("");
-		ProjectManager pm = new ProjectManager("OM", "kolkata", 60000);
+		System.out.print("Enter Name Of ProjectManager :-");
+		String s1 = sc.nextLine();
+		System.out.print("Enter Location Of ProjectManager :-");
+		String a1 = sc.nextLine();
+		System.out.print("Enter Salary Of ProjectManager :-");
+		int a2 = sc.nextInt();
+		ProjectManager pm = new ProjectManager(s1, a1, a2);
 		pm.salary();
 		System.out.println("");
-		AssitantProjectManager apm = new AssitantProjectManager("piyush", "nanded", 80000);
+		System.out.print("Enter Name Of AssitantProjectManager :-");
+		String s2 = sc.nextLine();
+		System.out.print("Enter Location Of AssitantProjectManager :-");
+		String a22 = sc.nextLine();
+		System.out.print("Enter Salary Of AssitantProjectManager :-");
+		int a3 = sc.nextInt();
+		AssitantProjectManager apm = new AssitantProjectManager(s2, a22, a3);
 		apm.salary();
 		System.out.println("");
 		TeamLead tl = new TeamLead("yash", "banglore", 100000);
